@@ -1,0 +1,11 @@
+@theme {
+  --default-font-family: ui-sans-serif, system-ui, sans-serif;
+  --default-mono-font-family: ui-monospace, monospace;
+  /* colors */
+  --base-fore: theme(color.stone.700);
+  --base-line: theme(color.stone.500);
+  --base-back: theme(color.stone.300);
+  --base-accent-primary: theme(color.stone.600);
+  --base-accent-secondary: theme(color.stone.500);
+  --menu-active: theme("color.amber.500/50%");
+}

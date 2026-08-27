@@ -1,0 +1,74 @@
+* {
+  line-height: 1em;
+  border-color: var(--base-line);
+}
+
+html {
+  color: var(--base-fore);
+  background-color: var(--base-back);
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: var(--base-accent-secondary) transparent;
+  background-blend-mode: multiply;
+}
+
+:root {
+  @apply roboto;
+  font-size: 16px;
+}
+
+#root {
+  @apply mx-auto min-h-screen max-w-screen w-2xl;
+  @apply flex flex-col;
+}
+
+#head,
+#foot {
+  @apply flex justify-between py-3;
+}
+
+#head {
+  @apply border-b sticky top-0;
+  background-color: color-mix(in srgb, var(--base-back), transparent 25%);
+  backdrop-filter: blur(2px);
+  h1 {
+    @apply roboto-bold;
+    color: var(--base-accent-primary);
+  }
+  ul {
+    @apply flex relative;
+    &::after {
+      content: "";
+      @apply absolute z-0;
+      position-anchor: --active-item;
+      position-area: center;
+      width: anchor-size(--active-item width, 0);
+      height: anchor-size(--active-item height, 0);
+      background-color: var(--menu-active);
+      border-radius: 4px;
+    }
+  }
+  li {
+    position: relative;
+    z-index: 100;
+    &:not(:last-child) {
+      @apply mr-4;
+    }
+    &.active {
+      @apply roboto-bold;
+      color: var(--base-accent-primary);
+      anchor-name: --active-item;
+    }
+  }
+}
+
+#foot {
+  @apply border-t;
+  a {
+    @apply font-bold;
+  }
+}
+
+#body {
+  @apply flex-1 py-3;
+}

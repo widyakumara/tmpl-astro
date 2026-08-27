@@ -1,0 +1,9 @@
+#body {
+  h1 {
+    @apply roboto-bold text-4xl mb-4;
+    color: var(--base-accent-primary);
+  }
+  p {
+    @apply leading-6 mb-6;
+  }
+}
