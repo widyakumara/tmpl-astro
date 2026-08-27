@@ -9,6 +9,7 @@ minimumReleaseAge = 172800
 minimumReleaseAgeExcludes = [
   "@astrojs/telemetry",
   "@types/bun",
+  "@types/node",
   "astro",
   "bun-types",
   "typescript",
