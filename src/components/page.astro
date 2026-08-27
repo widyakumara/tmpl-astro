@@ -1,0 +1,34 @@
+---
+import { PageFoot, PageHead } from "@components";
+import config from "@config";
+import { ClientRouter } from "astro:transitions";
+
+import "../styles/index.css";
+
+const { site } = config;
+const { props } = Astro;
+
+const title = props.title
+  ? `${props.title} • ${site.title}`
+  : `${site.title}: ${site.tagline}`;
+---
+
+<html lang="en">
+  <head>
+    <ClientRouter />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>{title}</title>
+  </head>
+  <body class:list={["page", props.page]}>
+    <div id="root">
+      <PageHead title={site.title} />
+      <div id="body">
+        <slot />
+      </div>
+      <PageFoot title={site.title} year={site.year} tagline={site.tagline} />
+    </div>
+  </body>
+</html>

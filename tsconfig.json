@@ -3,6 +3,9 @@
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": [".dist"],
   "compilerOptions": {
-    "paths": {}
+    "paths": {
+      "@components": ["./src/components/index.ts"],
+      "@config": ["./project.config.ts"]
+    }
   }
 }
