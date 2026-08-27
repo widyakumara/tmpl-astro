@@ -19,10 +19,13 @@ export default defineConfig({
   vite: {
     esbuild: { legalComments: "none" },
     build: {
+      emptyOutDir: true,
       rollupOptions: {
         output: {
           hashCharacters: "base36",
           assetFileNames: "inc/[hash:8].[ext]",
+          chunkFileNames: "inc/c[hash:7].js",
+          entryFileNames: "inc/e[hash:7].js",
         },
       },
     },
