@@ -9,6 +9,8 @@
     "esbuild": true
   },
   "scripts": {
+    "fmt": "prettier --write .",
+    "lint": "eslint .",
     "astro": "astro",
     "build": "astro build",
     "dev": "astro dev",
@@ -16,5 +18,9 @@
   },
   "dependencies": {
     "astro": "^7.2.9"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }
