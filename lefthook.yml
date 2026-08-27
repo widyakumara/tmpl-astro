@@ -3,7 +3,7 @@ pre-commit:
     - name: format
       stage_fixed: true
       glob: "*.{js,cjs,mjs,jsx,ts,mts,tsx,astro,vue,svelte,html,yaml,yml,css,scss,json,jsonc}"
-      run: bun prettier --write {staged_files}
+      run: bun prettier --write --no-error-on-unmatched-pattern {staged_files}
     - name: lint
       stage_fixed: true
       glob: "*.{js,cjs,mjs,jsx,ts,tsx,mts,astro,vue,svelte}"
