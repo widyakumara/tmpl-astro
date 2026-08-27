@@ -1,0 +1,15 @@
+telemetry = false
+
+[run]
+silent = true
+
+[install]
+minimumReleaseAge = 172800
+
+minimumReleaseAgeExcludes = [
+  "@astrojs/telemetry",
+  "@types/bun",
+  "astro",
+  "bun-types",
+  "typescript",
+]
